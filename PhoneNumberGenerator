@@ -1,0 +1,12 @@
+import java.util.Random;
+
+public class PhoneNumberGenerator {
+    public static void main(String[] args) {
+        Random random = new Random();
+        int firstThreeDigits = random.nextInt(799) + 100; // ensures first three digits don't contain 8 or 9
+        int secondThreeDigits = random.nextInt(832);
+        int lastFourDigits = random.nextInt(10000);
+
+        System.out.printf("%03d-%03d-%04d", firstThreeDigits, secondThreeDigits, lastFourDigits);
+    }
+}
